@@ -1,0 +1,2 @@
+class SetupPartsController < ApplicationController
+end
