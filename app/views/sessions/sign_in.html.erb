@@ -1,0 +1,14 @@
+
+<h1>Sign In</h1>
+
+<%= form_with model: @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit "Sign in" %>
+<%end%>
+
+<% flash.each do |key, v| %>
+    <li style='color: red'> <%= v %></li>
+<%end%>

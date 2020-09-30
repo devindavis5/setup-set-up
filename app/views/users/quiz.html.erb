@@ -1,0 +1,37 @@
+<h1> Build My Setup </h1>
+<br>
+<%= form_with model: @setup, :url => url_for(:controller => 'setups', :action => 'select') do |f|%>
+    What do you want your setup name to be? <%= f.text_field :name %>
+    <br></br><br>
+    What is your max budget?  <select name="max_budget" id="budget">
+    <option value="">Please Select</option>
+    <option value="700">$700</option>
+    <option value="1000">$1000</option>
+    <option value="1500">$1500</option>
+    <option value="2000">$2000</option>
+    <option value="3000">$3000</option>
+    </select>
+    <br></br>
+    What is the primary use for this computer?  <select name="use" id="use">
+    <option value="">Please Select</option>
+    <option value="Gaming">Gaming</option>
+    <option value="Software">Software Engineering</option>
+    <option value="Video">Video Editing</option>
+    <option value="Graphic">Graphic Design</option>
+    </select>
+    <br></br>
+    How important is a large monitor?  <select name="size" id="size">
+    <option value="">Please Select</option>
+    <option value="Large">Large is a necessity</option>
+    <option value="Large or Average">Large is preferred, but Average is good</option>
+    <option value="Average">Average is preferred</option>
+    </select>
+    <br></br>
+    Do you want your setup to be colorful?  <select name="color" id="color">
+    <option value="">Please Select</option>
+    <option value="RGB">RGB - Give me the rainbow!</option>
+    <option value="No Color">No Color</option>
+    </select>
+    <br></br><br>
+    <%= f.submit "Submit" %>
+<%end%>
