@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :users
   get "/homepage", to: "application#homepage"
   get "/user/profile", to: "users#profile"
-  get "/user/quiz", to: "users#quiz"
+  # get "/user/quiz", to: "users#quiz"
   # patch "/setups", to: "setups#create"
-  post "/setups", to: "setups#select"
+  # post "/setups", to: "setups#select"
 
   get "/sign_in", to: "sessions#sign_in"
   post '/sessions', to: 'sessions#create'

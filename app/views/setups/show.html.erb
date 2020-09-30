@@ -1,0 +1,5 @@
+<h1>Setup: <%=@setup.name%></h1>
+<h2>Parts:</h2>
+<%@parts.each do |p|%>
+    <li><%= link_to p.name, part_path(p) %></li>
+<%end%>

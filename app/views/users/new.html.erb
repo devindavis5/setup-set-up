@@ -14,3 +14,6 @@
     <%= f.password_field :password %>
     <%= f.submit "Create" %>
 <%end%>
+<br></br>
+<br></br>
+<%= button_to 'Sign in Instead', {controller: "sessions", action: 'sign_in'}, method: :get %>

@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
     def profile
         @user = User.find(session[:id])
+        @setups = @user.my_setups
     end
 
     def quiz

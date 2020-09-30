@@ -1,6 +1,13 @@
+<% if flash[:errors] %>
+<% flash[:errors].each do |e|%>
+    <li style="color:red"><%= e %></li>
+<%end%>
+<%end%>
+
+
 <h1> Build My Setup </h1>
 <br>
-<%= form_with model: @setup, :url => url_for(:controller => 'setups', :action => 'select') do |f|%>
+<%= form_with model: @setup, :url => url_for(:controller => 'setups', :action => 'create') do |f|%>
     What do you want your setup name to be? <%= f.text_field :name %>
     <br></br><br>
     What is your max budget?  <select name="max_budget" id="budget">

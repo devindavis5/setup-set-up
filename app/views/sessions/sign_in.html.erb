@@ -1,4 +1,6 @@
-
+<% flash.each do |key, v| %>
+    <p style='color: red'> <%= v %></p>
+<%end%>
 <h1>Sign In</h1>
 
 <%= form_with model: @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
@@ -8,7 +10,6 @@
     <%= f.password_field :password %>
     <%= f.submit "Sign in" %>
 <%end%>
-
-<% flash.each do |key, v| %>
-    <li style='color: red'> <%= v %></li>
-<%end%>
+<br></br>
+<br></br>
+<%= button_to "Create an Account Instead", {controller: "users", action: "new" }, method: :get %>

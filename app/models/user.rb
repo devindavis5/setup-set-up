@@ -7,4 +7,7 @@ class User < ApplicationRecord
     validates(:password, {presence: true})
     validates :password, length: { minimum: 6 }
 
+    def my_setups
+        self.setups
+    end
 end
