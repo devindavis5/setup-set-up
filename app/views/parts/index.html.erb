@@ -1,0 +1,12 @@
+<div class="bg">
+<div class="text">
+<h1>All Parts</h1>
+</div>
+<hr/>
+<div class="text">
+<br></br>
+<%@parts.each do |p|%>
+    <li><%= link_to p.description, part_path(p) %></li>
+<%end%>
+</div>
+</div>

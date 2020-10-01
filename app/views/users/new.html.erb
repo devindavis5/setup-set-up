@@ -1,10 +1,15 @@
+<div class="bg">
+<div class="text">
 <% if flash[:errors] %>
 <% flash[:errors].each do |e|%>
     <li style="color:red"><%= e %></li>
 <%end%>
 <%end%>
-
 <h1>New User</h1>
+</div>
+<hr/>
+<div class="text">
+<br></br>
 <%= form_for @user do |f|%>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -16,4 +21,6 @@
 <%end%>
 <br></br>
 <br></br>
-<%= button_to 'Sign in Instead', {controller: "sessions", action: 'sign_in'}, method: :get %>
+<a href="/sign_in"<button type="button sign_in" class="btn btn-outline-dark btn-lg""> Sign In Instead</button></a>
+</div>
+</div>

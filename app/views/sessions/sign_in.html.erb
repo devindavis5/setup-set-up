@@ -1,8 +1,13 @@
+<div class="bg">
+<div class="text">
 <% flash.each do |key, v| %>
     <p style='color: red'> <%= v %></p>
 <%end%>
 <h1>Sign In</h1>
-
+</div>
+<hr/>
+<div class="text">
+<br></br>
 <%= form_with model: @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
     <%= f.label :username %>
     <%= f.text_field :username %>
@@ -12,4 +17,6 @@
 <%end%>
 <br></br>
 <br></br>
-<%= button_to "Create an Account Instead", {controller: "users", action: "new" }, method: :get %>
+<a href="/users/new"<button type="button" class="btn btn-outline-dark btn-lg""> Create New User Instead</button></h1></a>
+</div>
+</div>

@@ -1,3 +1,16 @@
-<h1><%=@part.name%>:</h1>
+<div class="bg">
+<div class="text">
+<h1><%=@part.name%></h1>
+</div>
+<hr/>
+<div class="text">
+<br></br>
+<img src="<%=@part.image_url%>" alt="" width="250" height="250">
 <br></br>
 <p><%=@part.description%></p>
+<br></br>
+$<%=@part.cost%>
+<br></br>
+<%= link_to "Amazon", @part.link %>
+</div>
+</div>

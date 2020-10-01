@@ -1,8 +1,14 @@
+<div class="bg">
+<div class="text">
 <% flash.each do | key, v | %>
     <p style='color: green '> <%= v %> </p>
     <%end %>
 
 <h1>Welcome, <%=@user.name%></h1>
+</div>
+<hr/>
+<div class="text">
+<br></br>
 <h2>Current Setups</h2>
 <%@setups.each do |s|%>
     <li><%= link_to s.name, setup_path(s) %></li>
@@ -17,3 +23,5 @@
 <br></br>
 <br></br>
 <%= button_to 'Logout', {controller: :sessions, action: 'destroy'}, method: :delete %>
+</div>
+</div>

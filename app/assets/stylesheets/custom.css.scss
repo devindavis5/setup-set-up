@@ -1,0 +1,43 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+body, html {
+    height: 100%;
+
+}
+.bg {
+    /* The image used */
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v461-taus-14a-modernblackandwhite_1.jpg?bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&q=65&usm=15&vib=3&w=1000&s=a8e51fbb4706d02b65eb8b111b6f8414');
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.text{
+    // margin: 0px 10px 10px 10px
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 45px;
+    font-family: Arial;
+}
+
+.container{
+    text-align: center;
+    width: 300px;  
+    height: 200px;  
+    padding-top: 100px;  
+} 
+
+input[type="submit"] {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 1px solid #000000;
+    cursor:pointer;
+    overflow: hidden;
+}

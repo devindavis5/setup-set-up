@@ -1,5 +1,16 @@
+<div class="bg">
+<div class="text">
 <h1>Setup: <%=@setup.name%></h1>
+</div>
+<hr/>
+<div class="text">
+<br></br>
 <h2>Parts:</h2>
+<br>
 <%@parts.each do |p|%>
     <li><%= link_to p.name, part_path(p) %></li>
 <%end%>
+<br></br>
+<p>Total Cost: $<%=@setup.total_cost%></p>
+</div>
+</div>
