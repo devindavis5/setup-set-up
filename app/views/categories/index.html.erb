@@ -1,17 +1,14 @@
 <div class="bg">
 <div class="text">
-<h1><%=@part.name%></h1>
+<h1>Select a Category</h1>
 </div>
 <hr/>
 <div class="text">
 <br></br>
-<img src="<%=@part.image_url%>" alt="" width="150" height="150">
-<br></br>
-<p><%=@part.description%></p>
-<br></br>
-<p>$<%=@part.cost%> | <%= link_to "Amazon", @part.link %></p>
-<br></br>
-<a href="/categories/<%=@category.id%>"<button type="button" class="btn btn-outline-dark btn-sm">Edit Part</button></a>
+<%@categories.each do |c|%>
+    <a style="padding-top: 1px;padding-bottom: 1px;"href= <%=category_path(c)%>"<button type="button" class="btn btn-outline-dark btn-sm""><%=c.name%></button></a>
+    <div style="height:4px;font-size:1px;">&nbsp;</div>
+<%end%>
 </div>
 <div class="footer">
 <hr/>

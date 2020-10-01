@@ -5,7 +5,13 @@ class PartsController < ApplicationController
         @parts = Part.all
     end
 
-    def show
+    def display
         @part = Part.find(params[:id])
     end
+    
+    def show
+        @part = Part.find(params[:id])
+        @category = @part.category
+    end
+
 end

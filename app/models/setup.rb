@@ -23,10 +23,10 @@ class Setup < ApplicationRecord
     end
 
     def select_graphics
-        if @budget == 700
+        if @budget == 1000
             graph = Part.find_by(description: "Gigabyte GV-N1030OC-2GI Nvidia GeForce GT 1030 OC 2G Graphics Card")
             SetupPart.create(setup_id: self.id, part_id: graph.id)
-        elsif @budget == 1000 || @budget == 1500
+        elsif @budget == 1500
             graph = Part.find_by(description: "Gigabyte Geforce GTX 1050 Ti OC Low Profile 4GB GDDR5 128 Bit PCI-E Graphic Card")
             SetupPart.create(setup_id: self.id, part_id: graph.id)
         elsif @budget == 2000
@@ -40,7 +40,7 @@ class Setup < ApplicationRecord
     end
 
     def select_processor
-        if @budget == 700
+        if @budget == 1000
             if @use == "Video"
                 procs = Part.find_by(description: "AMD Ryzen 5 3600 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler")
                 SetupPart.create(setup_id: self.id, part_id: procs.id)
@@ -48,7 +48,7 @@ class Setup < ApplicationRecord
                 procs = Part.find_by(description: "Intel Core i5-9600K Desktop Processor 6 Cores up to 4.6 GHz Turbo unlocked LGA1151 300 Series 95W")
                 SetupPart.create(setup_id: self.id, part_id: procs.id)
             end
-        elsif @budget == 1000 || @budget == 1500 || @budget == 2000
+        elsif @budget == 1500 || @budget == 2000
             if @use == "Video"
                 procs = Part.find_by(description: "AMD Ryzen 9 3900X 12-core, 24-thread unlocked desktop processor with Wraith Prism LED Cooler")
                 SetupPart.create(setup_id: self.id, part_id: procs.id)
@@ -69,10 +69,10 @@ class Setup < ApplicationRecord
     end
 
     def select_ram
-        if @budget == 700
+        if @budget == 1000
             ram = Part.find_by(description: "Corsair Vengeance LPX 8GB (1 x 8GB) DDR4 DRAM 2400MHz C16 (PC4-19200) Memory Kit - Vengeance LPX Black")
             SetupPart.create(setup_id: self.id, part_id: ram.id)
-        elsif @budget == 1000
+        elsif @budget == 1500
             ram = Part.find_by(description: "Corsair Vengeance RGB Pro 16GB (2x8GB) DDR4 3200MHz C16 LED Desktop Memory - Black")
             SetupPart.create(setup_id: self.id, part_id: ram.id)
         else

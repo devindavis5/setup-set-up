@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get "/user/quiz", to: "users#quiz"
   # patch "/setups", to: "setups#create"
   # post "/setups", to: "setups#select"
-
+  get "/parts/display/:id", to: "parts#display"
   get "/sign_in", to: "sessions#sign_in"
   post '/sessions', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
