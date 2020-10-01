@@ -5,12 +5,19 @@
 <hr/>
 <div class="text">
 <br></br>
-<img src="<%=@part.image_url%>" alt="" width="250" height="250">
+<img src="<%=@part.image_url%>" alt="" width="150" height="150">
 <br></br>
 <p><%=@part.description%></p>
 <br></br>
 $<%=@part.cost%>
 <br></br>
 <%= link_to "Amazon", @part.link %>
+</div>
+<div class="footer">
+<hr/>
+<div class="text">
+<a href="/user/profile"<button type="button" class="btn btn-outline-dark btn-sm">My Profile</button></a>
+<a href='/logout'<button type="button logout" class="btn btn-outline-dark btn-sm">Logout</button></a>
+</div>
 </div>
 </div>

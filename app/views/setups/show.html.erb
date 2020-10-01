@@ -1,16 +1,22 @@
 <div class="bg">
 <div class="text">
-<h1>Setup: <%=@setup.name%></h1>
+<h1><%=@setup.name%></h1>
 </div>
 <hr/>
 <div class="text">
-<br></br>
-<h2>Parts:</h2>
 <br>
 <%@parts.each do |p|%>
-    <li><%= link_to p.name, part_path(p) %></li>
+    <a style="padding-top: 1px;padding-bottom: 1px;"href= <%=part_path(p)%>"<button type="button" class="btn btn-outline-dark btn-sm""><%=p.name%></button></a>
+    <div style="height:4px;font-size:1px;">&nbsp;</div>
 <%end%>
 <br></br>
-<p>Total Cost: $<%=@setup.total_cost%></p>
+<div class="box">Total Cost: $<%=@setup.total_cost%></div>
+</div>
+<div class="footer">
+<hr/>
+<div class="text">
+<a href="/user/profile"<button type="button" class="btn btn-outline-dark btn-sm">My Profile</button></a>
+<a href='/logout'<button type="button logout" class="btn btn-outline-dark btn-sm">Logout</button></a>
+</div>
 </div>
 </div>

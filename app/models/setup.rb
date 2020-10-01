@@ -146,7 +146,7 @@ class Setup < ApplicationRecord
     end
 
     def total_cost
-        results = self.my_parts.map {|p| p.cost}
-        byebug
+        results = self.my_parts.map {|p| p.cost}.sum
+        resultss = "%.2f" % results
     end
 end

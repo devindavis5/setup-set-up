@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/sign_in", to: "sessions#sign_in"
   post '/sessions', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
 
   resources :application
   resources :setup_parts

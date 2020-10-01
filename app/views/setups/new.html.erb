@@ -9,17 +9,17 @@
 </div>
 <hr/>
 <div class="text">
-<br></br>
+<br>
 <%= form_with model: @setup, :url => url_for(:controller => 'setups', :action => 'create') do |f|%>
     What do you want your setup name to be? <%= f.text_field :name %>
-    <br></br><br>
+    <br></br>
     What is your max budget?  <select name="max_budget" id="budget">
     <option value="">Please Select</option>
     <option value=700>$700</option>
     <option value=1000>$1000</option>
     <option value=1500>$1500</option>
     <option value=2000>$2000</option>
-    <option value=3000>$3000</option>
+    <option value=3500>$3500</option>
     </select>
     <br></br>
     What is the primary use for this computer?  <select name="use" id="use">
@@ -45,5 +45,12 @@
     <br></br><br>
     <%= f.submit "Submit" %>
 <%end%>
+</div>
+<div class="footer">
+<hr/>
+<div class="text">
+<a href="/user/profile"<button type="button" class="btn btn-outline-dark btn-sm">My Profile</button></a>
+<a href='/logout'<button type="button logout" class="btn btn-outline-dark btn-sm">Logout</button></a>
+</div>
 </div>
 </div>

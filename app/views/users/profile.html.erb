@@ -8,20 +8,18 @@
 </div>
 <hr/>
 <div class="text">
-<br></br>
-<h2>Current Setups</h2>
 <%@setups.each do |s|%>
-    <li><%= link_to s.name, setup_path(s) %></li>
-<%end%>
-<br></br>
-<%= button_to 'Take Quiz', {controller: :setups, action: 'new'}, method: :get %>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<%= button_to 'Logout', {controller: :sessions, action: 'destroy'}, method: :delete %>
+    <a href="<%=setup_path(s)%>"<button type="button" class="btn btn-outline-dark btn-sm"><%=s.name%></button></a>
+    <br></br>
+    <%end%>
+<br>
+<h5>Looking for a new setup?</h5>
+<a href="/setups/new"<button type="button" class="btn btn-outline-dark">Take Quiz</button></a>
+</div>
+<div class="footer">
+<hr/>
+<div class="text">
+<a href='/logout'<button type="button logout" class="btn btn-outline-dark btn-sm">Logout</button></a>
+</div>
 </div>
 </div>
