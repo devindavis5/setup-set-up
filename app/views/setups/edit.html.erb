@@ -9,22 +9,25 @@
 </div>
 <hr/>
 <div class="text">
+<div class="edit">
 <%= form_for @setup do |f| %>
     Setup Name: <%= f.text_field :name, size: "30"%>
-    <br></br>
-    Graphics Card: <%= select "graphic", "id", @graphiccards.map{|g| [g.description, g.id]}, {}, data: { behavior: 'category_dropdown' }%><br>
-    Processor: <%= select "cpu", "id", @cpus.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    RAM: <%= select "ram", "id", @rams.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    Motherboard: <%= select "mother", "id", @mothers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    Storage: <%= select "ssd", "id", @ssds.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    Power Supply: <%= select "power", "id", @powers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    Monitor: <%= select "monitor", "id", @monitors.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    Mouse: <%= select "mouse", "id", @mouses.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    Keyboard: <%= select "keyboard", "id", @keyboards.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    Tower: <%= select "tower", "id", @towers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
-    <br><br/>
+    <br>
+    <%= select "graphic", "id", @graphiccards.map{|g| [g.description, g.id]}, {}, data: { behavior: 'category_dropdown' }%><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "cpu", "id", @cpus.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "ram", "id", @rams.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "mother", "id", @mothers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "ssd", "id", @ssds.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "power", "id", @powers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "monitor", "id", @monitors.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "mouse", "id", @mouses.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "keyboard", "id", @keyboards.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' } %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "tower", "id", @towers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }%><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <%= select "fan", "id", @fans.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><div style="height:5px;font-size:1px;">&nbsp;</div>
+    <br>
     <%= f.submit %>
 <% end %>
+</div>
 <br></br>
 <br></br>
 <div class="footer">

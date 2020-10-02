@@ -24,6 +24,7 @@ class SetupsController < ApplicationController
     def edit
         @setup = Setup.find(params[:id])
         @parts = Part.all
+        
         @graphiccards = @setup.all_graphics
         @cpus = @setup.all_cpus
         @mothers = @setup.all_mothers
@@ -34,12 +35,25 @@ class SetupsController < ApplicationController
         @mouses = @setup.all_mouses
         @keyboards = @setup.all_keyboards
         @towers = @setup.all_towers
+        @fans = @setup.all_fans
+
+        @graphic = @setup.graphics_object
+        @cpu = @setup.processor_object
+        @mother = @setup.mother_object
+        @ram = @setup.ram_object
+        @ssd = @setup.ssd_object
+        @power = @setup.power_object
+        @monitor = @setup.monitor_object
+        @mouse = @setup.mouse_object
+        @keyboard = @setup.keyboard_object
+        @tower = @setup.tower_object
+        @fan = @setup.fan_object
     end
 
     def update
         @setup = Setup.find(params[:id])
         @setup.update(name: params[:setup][:name])
-        @setup.revise_setup(graphic: params[:graphic][:id], cpu: params[:cpu][:id], mother: params[:mother][:id], ram: params[:ram][:id], ssd: params[:ssd][:id], power: params[:power][:id], monitor: params[:monitor][:id], mouse: params[:mouse][:id], keyboard: params[:keyboard][:id], tower: params[:tower][:id])
+        @setup.revise_setup(graphic: params[:graphic][:id], cpu: params[:cpu][:id], mother: params[:mother][:id], ram: params[:ram][:id], ssd: params[:ssd][:id], power: params[:power][:id], monitor: params[:monitor][:id], mouse: params[:mouse][:id], keyboard: params[:keyboard][:id], tower: params[:tower][:id], fan: params[:fan][:id])
         flash[:alert] = "Your setup has been revised!"
         redirect_to setup_path
         # if @setup.save

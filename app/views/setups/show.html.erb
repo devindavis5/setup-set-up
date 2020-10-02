@@ -7,7 +7,6 @@
 </div>
 <hr/>
 <div class="text">
-<br>
 <%@parts.each do |p|%>
     <a style="padding-top: 1px;padding-bottom: 1px;"href= <%=part_path(p)%>"<button type="button" class="btn btn-outline-dark btn-sm""><%=p.name%></button></a>
     <div style="height:4px;font-size:1px;">&nbsp;</div>
@@ -16,8 +15,9 @@
 <div class="box">Total Cost: $<%=@setup.total_cost%></div>
 <br>
 <a href="/setups/<%=@setup.id%>/edit"<button type="button edit" class="btn btn-outline-dark btn-sm">Edit Setup</button></a>
+<a href="/setups/<%=@setup.id%>/destroy"<button type="button edit" class="btn btn-outline-dark btn-sm">Delete Setup</button></a>
 <%= form_with model: @setup, method: :delete do | f |%>
-    <%= f.submit "Delete Setup"%>
+    <%= f.button "Delete Setup"%>
     <%end%>
 </div>
 <div class="footer">

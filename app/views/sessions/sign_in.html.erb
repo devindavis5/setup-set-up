@@ -8,13 +8,13 @@
 <hr/>
 <div class="text">
 <br></br>
+<div class="sign">
 <%= form_with model: @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    Username: <%= f.text_field :username %>
+    Password: <%= f.password_field :password %><br>
     <%= f.submit "Sign in" %>
 <%end%>
+</div>
 <br></br>
 <br></br>
 <a href="/users/new"<button type="button" class="btn btn-outline-dark btn-sm"> Create New User Instead</button></h1></a>

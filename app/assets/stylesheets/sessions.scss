@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="submit"] {
+    background-color: rgb(231, 231, 231);
+    background-repeat:no-repeat;
+    border: 1px solid #000000;
+    cursor:pointer;
+    overflow: hidden;
+}
