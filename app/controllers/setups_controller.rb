@@ -56,17 +56,10 @@ class SetupsController < ApplicationController
         @setup.revise_setup(graphic: params[:graphic][:id], cpu: params[:cpu][:id], mother: params[:mother][:id], ram: params[:ram][:id], ssd: params[:ssd][:id], power: params[:power][:id], monitor: params[:monitor][:id], mouse: params[:mouse][:id], keyboard: params[:keyboard][:id], tower: params[:tower][:id], fan: params[:fan][:id])
         flash[:alert] = "Your setup has been revised!"
         redirect_to setup_path
-        # if @setup.save
-        #     @setup.update_setup(name: params[:setup][:name], user_id: session[:id], budget: params[:max_budget], use: params[:use], size: params[:size], color: params[:color])
-        #     flash[:alert] = "Your setup has been revised!"
-        #     redirect_to "/user/profile"
-        # else
-        #     flash[:errors] = @setup.errors.full_messages            
-        #     redirect_to "/setups/edit"
-        # end
     end
 
     def destroy
+        #incomplete - need to not delete if confirm is 'no'
         @setup = Setup.find(params[:id])
         @setup.destroy
         flash[:alert] = "Your setup has been deleted!"

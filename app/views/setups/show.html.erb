@@ -15,7 +15,7 @@
 <div class="box">Total Cost: $<%=@setup.total_cost%></div>
 <br>
 <a href="/setups/<%=@setup.id%>/edit"<button type="button edit" class="btn btn-outline-dark btn-sm">Edit Setup</button></a>
-<a href="/setups/<%=@setup.id%>" onclick="return confirm('Are you sure?')"<button type="button edit" class="btn btn-outline-dark btn-sm" data-method="delete" >Delete Setup</button></a>
+<a href="/setups/<%=@setup.id%>"<button type="button edit" class="btn btn-outline-dark btn-sm" data-confirm="Are you sure?" data-method="delete"data-method="delete">Delete Setup</button></a>
 </div>
 <div class="footer">
 <hr/>
