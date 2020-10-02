@@ -1,15 +1,15 @@
 <div class="bg">
 <div class="text">
-<h1><%=@part.name%></h1>
+<h1 style="text-align:center;"><%=@part.name%></h1>
 </div>
 <hr/>
 <div class="text">
 <br></br>
-<img src="<%=@part.image_url%>" alt="" width="150" height="150">
+<p style="text-align:center;"><img src="<%=@part.image_url%>" alt="" width="150" height="150"></p>
 <br></br>
-<p><%=@part.description%></p>
+<p style="text-align:center;"><%=@part.description%></p>
 <br></br>
-<p>$<%=@part.costs%> | <%= link_to "Amazon", @part.link %> | <%=@part.rating%>/5 <img src="http://clipart-library.com/img/2184497.png" alt="" width="18" height="18" class="t-image"></p>
+<p style="text-align:center;">$<%=@part.costs%> | <%= link_to "Amazon", @part.link %> | <%=@part.rating%>/5 <img src="https://www.pinclipart.com/picdir/big/3-36229_shaded-yellow-star-clip-art-star-transparent-background.png" alt="" width="18" height="18" class="t-image"></p>
 <br></br>
 </div>
 <div class="footer">
