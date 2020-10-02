@@ -1,0 +1,37 @@
+<div class="bg">
+<div class="text">
+<% if flash[:errors] %>
+<% flash[:errors].each do |e|%>
+    <li style="color:red"><%= e %></li>
+<%end%>
+<%end%>
+<h1>Revise Setup</h1>
+</div>
+<hr/>
+<div class="text">
+<%= form_for @setup do |f| %>
+    Setup Name: <%= f.text_field :name, size: "30"%>
+    <br></br>
+    Graphics Card: <%= select "graphic", "id", @graphiccards.map{|g| [g.description, g.id]}, {}, data: { behavior: 'category_dropdown' }%><br>
+    Processor: <%= select "cpu", "id", @cpus.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    RAM: <%= select "ram", "id", @rams.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    Motherboard: <%= select "mother", "id", @mothers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    Storage: <%= select "ssd", "id", @ssds.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    Power Supply: <%= select "power", "id", @powers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    Monitor: <%= select "monitor", "id", @monitors.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    Mouse: <%= select "mouse", "id", @mouses.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    Keyboard: <%= select "keyboard", "id", @keyboards.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    Tower: <%= select "tower", "id", @towers.map{|c| [c.description, c.id]}, {}, data: { behavior: 'category_dropdown' }  %><br>
+    <br><br/>
+    <%= f.submit %>
+<% end %>
+<br></br>
+<br></br>
+<div class="footer">
+<hr/>
+<div class="text">
+<a href="/user/profile"<button type="button" class="btn btn-outline-dark btn-sm">My Profile</button></a>
+<a href='/logout'<button type="button logout" class="btn btn-outline-dark btn-sm">Logout</button></a>
+</div>
+</div>
+</div>

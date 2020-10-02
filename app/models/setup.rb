@@ -149,4 +149,136 @@ class Setup < ApplicationRecord
         results = self.my_parts.map {|p| p.cost}.sum
         resultss = "%.2f" % results
     end
+
+    def graphics_object
+        self.my_parts.find {|p| p.name == "Graphics card"}
+    end
+
+    def processor_object
+        self.my_parts.find {|p| p.name == "CPU"}
+    end
+
+    def mother_object
+        self.my_parts.find {|p| p.name == "Motherboard"}
+    end
+
+    def ram_object
+        self.my_parts.find {|p| p.name == "RAM"}
+    end
+
+    def ssd_object
+        self.my_parts.find {|p| p.name == "SSD"}
+    end
+
+    def power_object
+        self.my_parts.find {|p| p.name == "Power Supply"}
+    end
+
+    def monitor_object
+        self.my_parts.find {|p| p.name == "Monitor"}
+    end
+
+    def mouse_object
+        self.my_parts.find {|p| p.name == "Mouse"}
+    end
+
+    def keyboard_object
+        self.my_parts.find {|p| p.name == "Keyboard"}
+    end
+
+    def tower_object
+        self.my_parts.find {|p| p.name == "Tower"}
+    end
+
+    def revise_setup(graphic:, cpu:, mother:, ram:, ssd:, power:, monitor:, mouse:, keyboard:, tower:)
+        old_graphics = self.graphics_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_graphics)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: graphic)
+
+        old_cpu = self.processor_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_cpu)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: cpu)
+
+        old_mother = self.mother_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_mother)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: mother)
+
+        old_ram = self.ram_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_ram)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: ram)
+
+        old_ssd = self.ssd_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_ssd)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: ssd)
+
+        old_power = self.power_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_power)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: power)
+
+        old_monitor = self.monitor_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_monitor)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: monitor)
+
+        old_mouse = self.mouse_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_mouse)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: mouse)
+
+        old_keyboard = self.keyboard_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_keyboard)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: keyboard)
+
+        old_tower = self.tower_object.id
+        old_setuppart = SetupPart.find_by(setup_id: self.id, part_id: old_tower)
+        old_setuppart.destroy
+        SetupPart.create(setup_id: self.id, part_id: tower)
+    end
+
+    def all_graphics
+        Part.all.select {|p| p.name == "Graphics card"}
+    end
+
+    def all_cpus
+        Part.all.select {|p| p.name == "CPU"}
+    end
+
+    def all_mothers
+        Part.all.select {|p| p.name == "Motherboard"}
+    end
+
+    def all_rams
+        Part.all.select {|p| p.name == "RAM"}
+    end
+
+    def all_ssds
+        Part.all.select {|p| p.name == "SSD"}
+    end
+
+    def all_powers
+        Part.all.select {|p| p.name == "Power Supply"}
+    end
+
+    def all_monitors
+        Part.all.select {|p| p.name == "Monitor"}
+    end
+
+    def all_mouses
+        Part.all.select {|p| p.name == "Mouse"}
+    end
+
+    def all_keyboards
+        Part.all.select {|p| p.name == "Keyboard"}
+    end
+
+    def all_towers
+        Part.all.select {|p| p.name == "Tower"}
+    end
 end

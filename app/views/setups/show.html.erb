@@ -1,5 +1,8 @@
 <div class="bg">
 <div class="text">
+<% flash.each do | key, v | %>
+    <p style='color: green '> <%= v %> </p>
+    <%end %>
 <h1><%=@setup.name%></h1>
 </div>
 <hr/>
@@ -9,8 +12,13 @@
     <a style="padding-top: 1px;padding-bottom: 1px;"href= <%=part_path(p)%>"<button type="button" class="btn btn-outline-dark btn-sm""><%=p.name%></button></a>
     <div style="height:4px;font-size:1px;">&nbsp;</div>
 <%end%>
-<br></br>
+<br>
 <div class="box">Total Cost: $<%=@setup.total_cost%></div>
+<br>
+<a href="/setups/<%=@setup.id%>/edit"<button type="button edit" class="btn btn-outline-dark btn-sm">Edit Setup</button></a>
+<%= form_with model: @setup, method: :delete do | f |%>
+    <%= f.submit "Delete Setup"%>
+    <%end%>
 </div>
 <div class="footer">
 <hr/>

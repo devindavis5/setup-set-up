@@ -6,7 +6,7 @@
 <div class="text">
 <br></br>
 <%@parts.each do |p|%>
-    <a style="padding-top: 1px;padding-bottom: 1px;"href= /parts/display/<%=p.id%>"<button type="button" class="btn btn-outline-dark btn-sm""><%=p.description%></button></a>
+    <a style="padding-top: 1px;padding-bottom: 1px;"href= /parts/<%=p.id%>"<button type="button" class="btn btn-outline-dark btn-sm""><%=p.description%></button></a>
     <div style="height:4px;font-size:1px;">&nbsp;</div>
 <%end%>
 </div>
