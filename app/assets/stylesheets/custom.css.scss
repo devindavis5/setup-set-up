@@ -54,3 +54,7 @@ body, html {
     text-align: left;
 }
 
+.t-image {
+    position: relative; /* Declared position allows for location changes */
+    top: -3px; /* Moves the image 2px closer to the top of the page */
+}

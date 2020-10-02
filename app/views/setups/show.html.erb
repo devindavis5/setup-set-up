@@ -15,10 +15,7 @@
 <div class="box">Total Cost: $<%=@setup.total_cost%></div>
 <br>
 <a href="/setups/<%=@setup.id%>/edit"<button type="button edit" class="btn btn-outline-dark btn-sm">Edit Setup</button></a>
-<a href="/setups/<%=@setup.id%>/destroy"<button type="button edit" class="btn btn-outline-dark btn-sm">Delete Setup</button></a>
-<%= form_with model: @setup, method: :delete do | f |%>
-    <%= f.button "Delete Setup"%>
-    <%end%>
+<a href="/setups/<%=@setup.id%>" onclick="return confirm('Are you sure?')"<button type="button edit" class="btn btn-outline-dark btn-sm" data-method="delete" >Delete Setup</button></a>
 </div>
 <div class="footer">
 <hr/>
