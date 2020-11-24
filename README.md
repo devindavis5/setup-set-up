@@ -1,25 +1,13 @@
 # README
+# Setup Set Up.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Video Demo:
+ [BioInfinite Demo Link](https://www.youtube.com/watch?v=fyt5f4rThxE)
 
-Things you may want to cover:
+### Technical Description: 
+A full-stack web application, created with:
+- Server Side: Ruby on Rails
+- Client Side: JavaScript React
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# setup-set-up
+### App Description:
+Created by Devin Davis and Bree Warren, BioInfinite serves as an interactive learning tool that allows a user to gain knowledge in several subjects in the scope of Biology.
