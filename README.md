@@ -1,13 +1,11 @@
 # README
-# Setup Set Up.
+# Setup Set Up
 
 ### Video Demo:
- [BioInfinite Demo Link](https://www.youtube.com/watch?v=fyt5f4rThxE)
+ [Setup Set Up Demo Link](https://www.youtube.com/watch?v=MiZ_CaxoxRY)
 
 ### Technical Description: 
-A full-stack web application, created with:
-- Server Side: Ruby on Rails
-- Client Side: JavaScript React
+Built with Ruby on Rails
 
 ### App Description:
-Created by Devin Davis and Bree Warren, BioInfinite serves as an interactive learning tool that allows a user to gain knowledge in several subjects in the scope of Biology.
+Designed to simplify an otherwise daunting process of selecting computer parts, Setup Set Up determines the optimal selection for a user building their own PC based on quiz answers encompassing personal taste and intended use
