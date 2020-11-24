@@ -2,7 +2,7 @@
 # Setup Set Up
 
 ### Video Demo:
- [Setup Set Up Demo Link](https://www.youtube.com/watch?v=MiZ_CaxoxRY)
+ [Setup Set Up Demo](https://www.youtube.com/watch?v=MiZ_CaxoxRY)
 
 ### Technical Description: 
 Built with Ruby on Rails
